@@ -4,15 +4,17 @@ require("dotenv").config();
 const main = async () => {
   const httpEndpoint = process.env.HTTP_ENDPOINT;
   const privateKey = process.env.PRIVATE_KEY;
+  const account = process.env.ACCOUNT;
+  const nonce = process.env.NONCE;
 
   const web3 = new Web3(httpEndpoint);
   const tx = {
-    from: "0x2ce9F4a336EDd46cD*********",
-    to: "0x2ce9F4a336EDd46cD*********", // send to myself to cancel.
+    from: account,
+    to: account, // send to myself to cancel.
     gas: "300000",
     gasPrice: "35000000000",
     value: "0",
-    nonce: "13",
+    nonce: nonce,
     data: "",
   };
 
