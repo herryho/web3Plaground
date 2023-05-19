@@ -7,7 +7,7 @@
     "test": "jest",
     "start": "babel-node index.js",
     "build": "rimraf ./build && tsc",
-    "start-ts": "yarn run build && node build/get_user_rewards.js"
+    "cancel": "node ./src/cancelTransaction.js"
   },
   "keywords": [],
   "author": "",
