@@ -2,12 +2,12 @@ const Web3 = require("web3");
 require("dotenv").config();
 
 const main = async () => {
-  const httpEndpoint = process.env.HTTP_ENDPOINT;
+  const wssEndpoint = process.env.WSS_ENDPOINT;
   const privateKey = process.env.PRIVATE_KEY;
   const account = process.env.ACCOUNT;
   const nonce = process.env.NONCE;
 
-  const web3 = new Web3(httpEndpoint);
+  const web3 = new Web3(wssEndpoint);
   const tx = {
     from: account,
     to: account, // send to myself to cancel.
